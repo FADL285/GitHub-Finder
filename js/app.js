@@ -21,9 +21,12 @@ function getData(e) {
       } else {
         // Show Profile
         ui.showProfile(data.profile);
+        ui.showRepos(data.repos);
       }
     });
   } else {
-    ui.clearProfile();
+    ui.showAlert("Enter GitHub username to get data", "alert alert-info");
   }
+
+  ui.clearSearchInput();
 }
